@@ -1,6 +1,6 @@
 # 🚀 MERN DevBoost - VS Code Extension
 
-![version](https://img.shields.io/badge/version-0.0.1-blue)
+![version](https://img.shields.io/badge/version-1.0.0-blue)
 ![platform](https://img.shields.io/badge/platform-VS%20Code-blue)
 ![status](https://img.shields.io/badge/status-active-brightgreen)
 
