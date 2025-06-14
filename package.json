@@ -1,8 +1,9 @@
 {
   "name": "mern-devboost",
+  "icon": "Devboost.png",
   "displayName": "MERN DevBoost",
   "description": "Generate frontend and backend folder structure for MERN projects.",
-  "version": "0.0.1",
+ "version": "1.0.0",
   "publisher": "habibcodes",
   "engines": {
     "vscode": "^1.60.0"
