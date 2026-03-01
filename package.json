@@ -3,29 +3,36 @@
   "icon": "Devboost.png",
   "displayName": "MERN DevBoost",
   "description": "Generate frontend and backend folder structure for MERN projects.",
- "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "habibcodes",
   "engines": {
     "vscode": "^1.60.0"
   },
   "categories": ["Other", "Snippets"],
   "activationEvents": [
-    "onCommand:mernDevboost.generateStructure"
+    "onCommand:mernDevboost.generateStructure",
+    "onCommand:mernDevboost.generateResource"
   ],
   "contributes": {
     "commands": [
       {
         "command": "mernDevboost.generateStructure",
         "title": "MERN: Generate MERN Folder Structure"
+      },
+      {
+        "command": "mernDevboost.generateResource",
+        "title": "MERN: Generate API Resource (CRUD)"
       }
     ]
   },
-  "keywords": ["mern", "express", "react", "node", "project", "starter", "scaffold", "Fullstack", "boilerplate", "template", "folderstructure", "projectstructure", "mernstack", "mernboilerplate", "merntemplate"],
+  "keywords": [
+    "mern", "express", "react", "node", "project", "starter", "scaffold", "Fullstack", "boilerplate", "template", "folderstructure", "projectstructure", "mernstack", "mernboilerplate", "merntemplate"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Farhan043/mern-devboost"
   },
-   "license": "MIT",
+  "license": "MIT",
   "main": "extension.js",
   "scripts": {},
   "dependencies": {}

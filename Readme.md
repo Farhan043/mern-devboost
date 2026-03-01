@@ -1,133 +1,105 @@
-# 🚀 MERN DevBoost - VS Code Extension
+# 🚀 MERN DevBoost - The Ultimate MERN Stack Scaffolder
 
-![version](https://img.shields.io/badge/version-1.0.0-blue)
+![version](https://img.shields.io/badge/version-1.0.1-blue)
 ![platform](https://img.shields.io/badge/platform-VS%20Code-blue)
 ![status](https://img.shields.io/badge/status-active-brightgreen)
+![license](https://img.shields.io/badge/license-MIT-green)
 
+**MERN DevBoost** is a powerful developer productivity extension for VS Code. Stop wasting 40 minutes setting up folders, installing packages, and writing boilerplate code. 
 
-**MERN DevBoost** is a developer productivity VS Code extension that scaffolds a complete MERN (MongoDB, Express, React, Node.js) project structure — backend and frontend — in one command.
-
-Save hours of setup time and jump straight into coding!
-
----
-
-## ✨ Features
-
-* 📁 Auto-generates full **backend folder structure** with essential boilerplate files
-* ⚙️ Creates production-ready `server.js` + Express + MongoDB setup
-* ⚛️ Generates a **frontend React + Vite** structure using `create-vite`
-* 🌐 Includes working routing (`react-router-dom`) and example pages
-* 🧾 Automatically creates `.env` files for backend & frontend
-* 🛠️ No Tailwind or styling tools included — user can install their own
-* ↺ Safe for re-runs — only missing folders/files are created
+With MERN DevBoost, you can scaffold a **Complete MERN (MongoDB, Express, React, Node.js) Project** and **Generate Full CRUD APIs** in just seconds! ⚡
 
 ---
 
-## 📁 Folder Structure Generated
+## ✨ Why MERN DevBoost?
 
-```
-📆 project-root/
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── db/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── services/
-│   ├── utils/
-│   ├── app.js
-│   ├── server.js
-│   └── .env
+* 🕒 **Save Hours of Setup:** Go from zero to a fully running full-stack app in 2 minutes.
+* 🏗️ **Industry-Standard Architecture:** Clean MVC (Model-View-Controller) backend structure.
+* 🔐 **Pre-Built Authentication:** JWT & bcrypt login/register logic already written for you.
+* ⚡ **Lightning Fast Frontend:** React powered by Vite, pre-configured with React Router and Axios.
+* 📖 **Smart Interactive Guide:** Automatically opens a beautiful Markdown guide (`DEVBOOST_GUIDE.md`) to help you start your servers and test APIs immediately.
+
+---
+
+## 🪄 The 2 Magic Commands
+
+Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac) to open the Command Palette and type **MERN**.
+
+### 1️⃣ `MERN: Generate MERN Folder Structure`
+Run this in an empty folder to create your entire project ecosystem.
+**What you get instantly:**
+* **Backend:** Express, Mongoose, dotenv, cors, jsonwebtoken setup.
+* **Frontend:** Vite + React, react-router-dom, axios.
+* **Auth Ready:** `User` Model, `authController.js`, and `authRoutes.js` pre-written.
+* **Database:** `db.js` file with MongoDB connection string ready in `.env`.
+
+### 2️⃣ `MERN: Generate API Resource (CRUD)` 🔥 *(NEW)*
+Never write boring boilerplate again! Run this command inside your project and type a resource name (e.g., `Product`, `Post`, `Task`).
+**What it does in 1 second:**
+* Generates `models/Product.js` (Mongoose Schema)
+* Generates `controllers/productController.js` (Create, Read, Update, Delete logic with try-catch blocks)
+* Generates `routes/productRoutes.js` (Express Router endpoints)
+
+---
+
+## 📁 What Does the Generated Structure Look Like?
+
+📆 your-project-name/
+├── 📂 backend/
+│   ├── 📂 controllers/  (authController.js)
+│   ├── 📂 db/           (db.js)
+│   ├── 📂 middleware/   (auth.js)
+│   ├── 📂 models/       (User.js)
+│   ├── 📂 routes/       (auth.js)
+│   ├── 📄 app.js        (Express app setup)
+│   ├── 📄 server.js     (Server entry point)
+│   └── 📄 .env          (MongoDB URI & JWT Secret)
 │
-└── frontend/
-    ├── public/
-    ├── src/
-    │   ├── App.jsx
-    │   ├── main.jsx
-    │   ├── index.css
-    │   ├── components/
-    │   ├── pages/
-    │   └── services/
-    └── .env
-```
+└── 📂 frontend/
+    ├── 📂 src/
+    │   ├── 📂 components/
+    │   ├── 📂 pages/    (Home, Login, Register)
+    │   ├── 📂 services/ (api.js - Axios config)
+    │   ├── 📄 App.jsx   (React Router config)
+    │   └── 📄 main.jsx
+    └── 📄 .env          (Vite API URL)
+
+---
+
+## 🎨 What about Tailwind CSS?
+We believe in keeping the UI clean so you can choose your own styling tools. However, if you love **Tailwind CSS**, our auto-generated `DEVBOOST_GUIDE.md` includes 3 simple copy-paste steps to integrate it flawlessly into your Vite frontend!
 
 ---
 
 ## ⚙️ Installation
 
 ### 🔗 From VS Code Marketplace (Recommended)
-
-1. Open **Extensions** tab in VS Code
-2. Search: `MERN DevBoost`
-3. Click **Install**
+1. Open the **Extensions** tab in VS Code.
+2. Search for: `MERN DevBoost`
+3. Click **Install**.
 
 ### 📦 From VSIX File (Offline)
-
-1. Download `.vsix` from [GitHub Releases](https://github.com/Farhan043/mern-devboost/releases)
-2. In VS Code: Extensions Panel → `...` → `Install from VSIX`
-
----
-
-## 🚀 How to Use
-
-1. Open any empty folder in VS Code
-2. Run the command:
-
-   * Press `Ctrl + Shift + P` (Windows/Linux)
-   * Press `Cmd + Shift + P` (macOS)
-3. Search for: `MERN: Generate MERN Folder Structure`
-4. Hit **Enter**
-5. 🎉 Done! Full project structure will be scaffolded automatically
-
----
-
-## 🧾 Notes
-
-* Frontend uses **Vite + React**
-* Tailwind or styling tools are **not pre-installed** — you can add them later
-* `.env` file is generated both in backend and frontend with placeholder values
-* You can run the command multiple times — it won't override existing files
-
----
-
-## 🛠 Future Plans
-
-* 🧠 Mongoose schema generator with prompts
-* 📄 `README.md` generator inside scaffold
-* 🧪 Built-in REST API test runner
-
----
-
-## 🎮 Demo (Coming Soon)
-
-> Want to contribute a GIF or walkthrough?
-> Submit a PR or open an issue!
+1. Download `.vsix` from [GitHub Releases](https://github.com/Farhan043/mern-devboost).
+2. In VS Code: Extensions Panel → `...` → `Install from VSIX`.
 
 ---
 
 ## 👨‍💻 Contributing
 
-1. Fork this repository
+We welcome contributions! Have a crazy new feature idea?
+1. Fork this repository.
 2. Create a branch: `git checkout -b feature/YourFeature`
-3. Commit your changes
-4. Push and open a Pull Request ✅
+3. Commit your changes.
+4. Push and open a Pull Request.
 
 ---
 
 ## 🙌 Author & Credits
 
-Created by [@habibcodes](https://github.com/Farhan043) 💻
-Star it ⭐️ on GitHub: [mern-devboost](https://github.com/Farhan043/mern-devboost)
-
----
-
-## 📩 Feedback / Support
-
-Open an issue at 👉 [https://github.com/Farhan043/mern-devboost/issues](https://github.com/Farhan043/mern-devboost/issues)
+Built with ❤️ by [@habibcodes](https://github.com/Farhan043).  
+If this extension saved your time, please leave a **Star ⭐️** on [GitHub](https://github.com/Farhan043/mern-devboost) and a review on the VS Code Marketplace!
 
 ---
 
 ## 📘 License
-
-Licensed under the [MIT License](LICENSE)
+Licensed under the [MIT License](LICENSE).
